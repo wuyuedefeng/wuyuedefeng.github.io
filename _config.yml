@@ -77,6 +77,10 @@ search:
   format: html
   limit: 10000
 
+admin:
+  username: wsen
+  password_hash: $2a$06$utRWMQXZIERj7d9lhal/1.9VsxrwBWTnLObK/CGvsCY5QiASNYWPG
+  secret: abc666
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
