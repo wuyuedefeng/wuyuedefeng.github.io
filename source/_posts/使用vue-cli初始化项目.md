@@ -154,3 +154,28 @@ new Vue({
   components: { App }
 })
 ```
+
+---
+#### 问题列表
+
+* vue-cli build后 Webfonts字体路径引用出错的问题
+ 找到 `webpack.base.conf.js`替换
+ 
+ ```
+  {
+      test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+      loader: 'url-loader',
+      query: {
+          limit: 10000,
+          name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
+      }
+  }
+ ```
+ 替换为
+ ```
+  {
+      test: /\.(woff|woff2|eot|ttf|svg)(\?.*$|$)/,
+      loader: 'url-loader?importLoaders=1&limit=100000'
+  }
+ ```
+ [参考](https://github.com/vuejs/vue-cli/issues/56)
