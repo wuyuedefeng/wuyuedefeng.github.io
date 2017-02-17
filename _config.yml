@@ -83,6 +83,7 @@ admin:
   password: wsen123
   secret: hey hexo
   expire: 60*5
+  deployCommand: './hexo-deploy.sh'
 #  cors: http://www.itrydo.com
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

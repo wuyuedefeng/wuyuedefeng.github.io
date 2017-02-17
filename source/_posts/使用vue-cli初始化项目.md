@@ -1,4 +1,4 @@
-title: 使用vue-cli初始化项目
+title: 使用vue-cli初始化vue项目
 author: wsen
 tags:
   - vue-cli
