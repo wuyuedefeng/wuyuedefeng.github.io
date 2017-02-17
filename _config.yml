@@ -79,11 +79,11 @@ search:
 
 # Admin
 admin:
-  name: wsen
-  password: wsen123
-  secret: hey hexo
-  expire: 60*5
-#  cors: http://www.itrydo.com
+  username: wsen
+  password_hash: $2a$06$agYQF17tE.Rf/QBCVc943.Oj5RKe1Iy6dEDi7TReVSve7WYUJJYrW
+  secret: a secret something defined
+  deployCommand: './hexo-deploy.sh'
+
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
