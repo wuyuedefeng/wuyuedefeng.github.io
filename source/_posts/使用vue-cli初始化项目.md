@@ -42,4 +42,115 @@ npm install sass-loader --save-dev
 </style>
 ```
 
+### 使用 [vue-router](http://router.vuejs.org/zh-cn/) 实现单页路由
+```
+import Vue from 'vue'
+import Router from 'vue-router'
 
+Vue.use(Router)
+
+const router =  new Router({
+  routes: [
+    {
+      path: '/login',
+      name: 'login',
+      meta: { Auth: false },
+      component: function (resolve) {
+        require(['views/profiles/Login.vue'], resolve)
+      },
+      beforeEnter: (to, from, next) => {
+        next();
+      }
+    },
+    {
+      path: '/',
+      name: 'main',
+      meta: { Auth: true },
+      component: function (resolve) {
+          require(['components/Main'], resolve)
+      },
+      children: [
+        {
+          path: '',
+          name: 'index',
+          component: function (resolve) {
+            require(['views/Index'], resolve)
+          }
+        },
+        // 用户管理
+        {
+          // 以 / 开头的嵌套路径会被当作根路径
+          path: '/users', 
+          name: 'users',
+          component: function (resolve) {
+            require(['views/users'], resolve)
+          }
+        },
+        {
+            path: '/users/:userId/edit',
+            name: 'userEdit',
+            component: function (resolve) {
+                require(['views/users/userEdit'], resolve)
+            }
+        }
+      ]
+    },
+    { path: '*', redirect: '/' },
+  ]
+});
+
+router.beforeEach((to, from, next) => {
+  if (to.matched.some(record => record.meta.Auth) /* && is not login */) {
+    next({
+      path: '/login',
+      query: {redirect: to.fullPath}
+    })
+  } else{
+    next();
+  }
+})
+
+export default router;
+```
+文件: [按需加载](https://github.com/vuejs/vue-router/blob/master/docs/zh-cn/lazy.md)
+
+### 用 [vuex](https://vuex.vuejs.org/zh-cn) 管理我们的数据流
+```
+// 导入vuex
+import Vue from 'vue'
+import Vuex from 'vuex'
+
+Vue.use(Vuex)
+
+//导入modules
+import users from './modules/users'
+var store = new Vuex.Store({
+  state: {
+  },
+  actions: {
+  },
+  mutations: {
+  },
+  modules: {
+    users
+  }
+})
+```
+
+---
+### main.js
+```
+import Vue from 'vue'
+import App from './App'
+import router from './router'
+import store from './vuex/store'
+
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  router,
+  store,
+  template: '<App/>',
+  components: { App }
+})
+```
