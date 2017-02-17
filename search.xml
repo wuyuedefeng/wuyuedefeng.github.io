@@ -3,9 +3,9 @@
   
     
     <entry>
-      <title><![CDATA[怎样使用Hexo搭建个人博客]]></title>
-      <url>%2F2017%2F02%2F14%2F%E6%80%8E%E6%A0%B7%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%2F</url>
-      <content type="text"></content>
+      <title><![CDATA[使用vue-cli初始化项目]]></title>
+      <url>%2F2017%2F02%2F17%2F%E4%BD%BF%E7%94%A8vue-cli%E5%88%9D%E5%A7%8B%E5%8C%96%E9%A1%B9%E7%9B%AE%2F</url>
+      <content type="text"><![CDATA[init1234$ npm install -g vue-cli$ vue init webpack demo$ cd demo$ npm install demo 是这个示例项目的名字 现在看到目录结构如下 build 目录是一些webpack的文件，配置参数什么的，一般不用动 src 源码文件夹，基本上文件都应该放在这里。 static 生成好的文件会放在这个目录下。 test 测试文件夹，测试都写在这里 .babelrc babel编译参数，vue开发需要babel编译 .editorconfig 看名字是编辑器配置文件，不晓得是哪款编辑器，没有使用过。 .eslintrc.js eslint配置文件，用以规范团队开发编码规范，大中型项目很有用 .gitignore 用来过滤一些版本控制的文件，比如node_modules文件夹 index.html 主页 package.json 项目文件，记载着一些命令和依赖还有简要的项目描述信息 README.md 介绍自己这个项目的，想怎么写怎么写。 添加支持 sass 安装依赖包 12npm install node-sass --save-devnpm install sass-loader --save-dev style中添加lang=&quot;scss&quot; 123// 添加scope用来生成唯一样式 指定内部样式只对当前组件生效, 不添加scope样式将作用于全局&lt;style lang=&quot;scss&quot; scope&gt; &lt;/style&gt;]]></content>
     </entry>
 
     
