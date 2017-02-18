@@ -137,6 +137,70 @@ var store = new Vuex.Store({
 })
 ```
 
+### 集成 axios到项目中
+创建http.js
+```javascript
+import axios from 'axios'
+var store = null;
+
+const instance = axios.create();
+
+instance.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+
+// Add a request interceptor
+instance.interceptors.request.use(function (config) {
+    // Do something before request is sent
+    return config;
+}, function (error) {
+    // Do something with request error
+    return Promise.reject(error);
+});
+
+// Add a response interceptor
+instance.interceptors.response.use(function (response) {
+    // Do something with response data
+    if(response.data.code != 10000){ 
+        var error = new Error(response.data && response.data.msg);
+        // alert(error);
+        if(response.data.code == '50007' || response.data.code == '50004'){
+            // store && store.commit('logout');
+        }
+        throw error;
+    }
+    return response;
+}, function (error) {
+    // Do something with response error
+    // alert(error);
+    return Promise.reject(error);
+});
+
+instance.install = function (Vue, options) {
+    if(options.store) {
+        store = options.store
+    }
+    Vue.prototype.$http = instance;
+};
+
+export default instance;
+```
+usage: 
+
+eg: in main.js
+```
+import $http from './api/http'
+
+Vue.use($http, {store});
+```
+then you can use in components
+```
+this.$http.get() //equal call axios instanse get 
+```
+or in vuex
+```
+Vue.$http.get()
+```
+细节，编写自定义插件 请自行参考[官方文档](https://cn.vuejs.org/v2/guide/plugins.html)
+
 ---
 ### main.js
 ```
@@ -144,6 +208,9 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './vuex/store'
+import $http from './http'
+
+Vue.use($http, {store});
 
 /* eslint-disable no-new */
 new Vue({
@@ -178,4 +245,4 @@ new Vue({
       loader: 'url-loader?importLoaders=1&limit=100000'
   }
  ```
- [参考](https://github.com/vuejs/vue-cli/issues/56)
+解决方法参考自 [github](https://github.com/vuejs/vue-cli/issues/56)
