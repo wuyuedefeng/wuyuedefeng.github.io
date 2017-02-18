@@ -1,7 +1,7 @@
 title: pm2部署服务器
 author: wsen
 tags:
-  - mp2
+  - pm2
 categories:
   - node.js
 date: 2017-02-18 11:59:00
