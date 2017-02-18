@@ -137,7 +137,7 @@ var store = new Vuex.Store({
 })
 ```
 
-### 集成 axios到项目中
+### 集成[axios](https://github.com/mzabriskie/axios)到项目中
 创建http.js
 ```javascript
 import axios from 'axios'
