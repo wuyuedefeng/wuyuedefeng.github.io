@@ -1,4 +1,4 @@
-title: 安装  服务器环境： Ubuntu14.04
+title: 服务器环境安装nginx： Ubuntu14.04
 author: wsen
 tags:
   - install
