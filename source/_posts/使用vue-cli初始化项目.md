@@ -179,6 +179,7 @@ instance.install = function (Vue, options) {
         store = options.store
     }
     Vue.prototype.$http = instance;
+    Vue.$http = instance;
 };
 
 export default instance;
