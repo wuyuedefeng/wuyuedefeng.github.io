@@ -37,7 +37,7 @@ npm install sass-loader --save-dev
 ```
 > * style中添加`lang="scss"`
 ```
-// 添加scope用来生成唯一样式 指定内部样式只对当前组件生效, 不添加scope样式将作用于全局
+// 添加scoped用来生成唯一样式 指定内部样式只对当前组件生效, 不添加scoped样式将作用于全局
 <style lang="scss" scoped> 
 </style>
 ```
