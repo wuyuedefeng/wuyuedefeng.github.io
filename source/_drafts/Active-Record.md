@@ -333,6 +333,9 @@ after_*
 eg: 
 ```
 class User < ActiveRecord::Base
+	# 仅仅当创建的时候执行AfterCommit
+	after_commit :AfterCommit, on: :create
+    # test? 为真， 才会执行BeforeSave
 	before_save :BeforeSave, if: :test?
     def test?
     	true
