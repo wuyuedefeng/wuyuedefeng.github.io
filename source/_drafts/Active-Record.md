@@ -288,6 +288,38 @@ end
 - before_destroy
 - after_dstroy
 
+事务回调
+- after_commit #事务提交成功后执行
+- after_rollback #事务提交失败执行
+
+#### 可以触发回调的方法
+- create
+- create!
+- decrement!
+- destroy
+- destroy!
+- destroy_all
+- increment!
+- save
+- save!
+- save(validate: false)
+- toggle!
+- update_attribute
+- update
+- update!
+- valid?
+
+#### 跳过回调
+- decrement
+- decrement_count
+- delete
+- delete_all
+- increment
+- increment_counter
+- toggle
+- touch
+- update_column
+
 #### 终止回调
 before_* 
  - 返回false
@@ -297,7 +329,7 @@ after_*
 - 抛出异常
 
 
-#### 条件回调
+#### 条件回调 [和验证的条件回调类似]
 eg: 
 ```
 class User < ActiveRecord::Base
@@ -310,5 +342,3 @@ class User < ActiveRecord::Base
     end
 end
 ```
-
-
