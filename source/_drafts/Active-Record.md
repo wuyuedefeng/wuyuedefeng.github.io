@@ -267,6 +267,7 @@ end
 
 ### 回调
 
+#### 可用的回调
 创建对象回调
 - before_validation
 - after_validation
@@ -287,7 +288,27 @@ end
 - before_destroy
 - after_dstroy
 
+#### 终止回调
+before_* 
+ - 返回false
+ - 抛出异常
+
+after_* 
+- 抛出异常
 
 
+#### 条件回调
+eg: 
+```
+class User < ActiveRecord::Base
+	before_save :BeforeSave, if: :test?
+    def test?
+    	true
+    end
+    def BeforeSave 
+    	puts 'before_save'
+    end
+end
+```
 
 
