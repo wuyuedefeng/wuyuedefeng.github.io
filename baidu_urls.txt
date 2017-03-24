@@ -1,1 +1,1 @@
-http://www.itrydo.com/2017/02/25/函数去抖动之debounce/
+http://www.itrydo.com/2017/03/23/ruby基础/
