@@ -255,6 +255,189 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://www.itrydo.com/2017/03/26/vue基础/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="wsen">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="I Try Do">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="I Try Do" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/03/26/vue基础/" itemprop="url">
+                  vue基础
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-26T16:49:00+08:00">
+                2017-03-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/vue/" itemprop="url" rel="index">
+                    <span itemprop="name">vue</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/03/26/vue基础/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/26/vue基础/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/03/26/vue基础/" class="leancloud_visitors" data-flag-title="vue基础">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="demo"><a href="#demo" class="headerlink" title="demo"></a>demo</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div></pre></td><td class="code"><pre><div class="line">var vm = new Vue(&#123;</div><div class="line">	el: &apos;body&apos;,</div><div class="line">    data: &#123;</div><div class="line">    	a: 1</div><div class="line">    &#125;,</div><div class="line">    // 计算属性</div><div class="line">    computed: &#123;</div><div class="line">    	b: function()&#123; //默认是get</div><div class="line">        	return this.a + 1;</div><div class="line">        &#125;,</div><div class="line">        c: &#123;</div><div class="line">        	get: function()&#123;</div><div class="line">            	return this.a + 1;</div><div class="line">            &#125;</div><div class="line">            set: function(val)&#123;</div><div class="line">            	this.a = val;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;,</div><div class="line">    // 过滤器@1.x currency capitalize uppercase downcase debounce(ms) limitBy(count, index=0) filterBy(str) orderBy(1/-1) ...</div><div class="line">    fileters: &#123;</div><div class="line">    </div><div class="line">    &#125;,</div><div class="line">    </div><div class="line">    // @1.x transition</div><div class="line">    // 动画过度 可通过类定义，也可使用transitions</div><div class="line">    // &lt;div class=&quot;animated&quot; v-show=&quot;toggle&quot; transition=&quot;bounce&quot;&gt;&lt;/div&gt;</div><div class="line">    // 这里的class animated是animate.css做动画必须类！</div><div class="line">    transitions: &#123;</div><div class="line">    	bounce: &#123;</div><div class="line">        	enterClass: &apos;zoomInLeft&apos;,</div><div class="line">            leaveClass: &apos;zoomOutRight&apos;</div><div class="line">        &#125;</div><div class="line">    &#125;,</div><div class="line">    </div><div class="line">    // @2.x transition</div><div class="line">    // .fade-enter&#123;&#125; // 初始状态</div><div class="line">    // .fade-enter-active&#123;&#125; //变化成的状态-&gt;显示</div><div class="line">    // .fade-leave&#123;&#125;</div><div class="line">    // .fade-leave-active&#123;&#125; //变化成的状态-&gt;离开(消失)</div><div class="line">    &lt;transition name=&quot;fade&quot; @before-enter=&quot;beforeEnter()&quot; @enter=&quot;enter()&quot; @after-enter=&quot;afterEnter&quot; @before-leave=&quot;beforeLeave&quot; @leave=&quot;leave&quot; @after-leave=&quot;afterLeave&quot;&gt;</div><div class="line">    	&lt;p&gt;&lt;/p&gt;</div><div class="line">    &lt;/transition&gt;</div><div class="line">    </div><div class="line">    //2.x 结合animate.css使用</div><div class="line">    &lt;transition enter-active-class=&quot;zoomInLeft&quot; leave-active-class=&quot;bounceOutRight&quot;&gt;</div><div class="line">    	&lt;p class=&quot;animated&quot; v-show=&quot;show&quot;&gt;&lt;/p&gt;</div><div class="line">    &lt;/transition</div><div class="line">    </div><div class="line">    created: function()&#123;&#125;, // 创建之后</div><div class="line">    beforeCompile: function()&#123;&#125;, // 编译之前 @1.x</div><div class="line">    compiled: function()&#123;&#125;, // 变异之后 @1.x</div><div class="line">    ready: function()&#123;&#125;, //节点插入到文档 @1.x</div><div class="line">    </div><div class="line">    beforeDestroy: function()&#123;&#125;, //销毁之前</div><div class="line">    destroyed: function()&#123;&#125; // 销毁之后</div><div class="line">&#125;)</div><div class="line">vm.$el // 元素</div><div class="line">vm.$data // data本身</div><div class="line">vm.$mount // 手动挂载Vue程序</div><div class="line">vm.options // 获取自定义属性对象</div><div class="line">vm.$destroy // 销毁对象</div><div class="line">vm.$log() // 查看当前数据状态</div><div class="line"></div><div class="line">// 全局自定义过滤器</div><div class="line">Vue.filter(&apos;toDouble&apos;, function(val)&#123;</div><div class="line">	return val * 2;</div><div class="line">&#125;);</div><div class="line">// 双向过滤器 v-model </div><div class="line">Vue.filter(&apos;modelVal&apos;, &#123;</div><div class="line">	read: function(val)&#123;</div><div class="line">    	return val</div><div class="line">    &#125;,</div><div class="line">    write: function(val)&#123;</div><div class="line">    	return val;</div><div class="line">    &#125;</div><div class="line">&#125;)</div><div class="line"></div><div class="line">// 全局自定义指令</div><div class="line">// &lt;span v-red&gt;abc&lt;/span&gt;</div><div class="line">Vue.directive(&apos;red&apos;, function()&#123;</div><div class="line">	//this.el 绑定该指令的元素(原生dom元素)</div><div class="line">    this.el.style.background = &apos;red&apos;;</div><div class="line">&#125;);</div><div class="line">// 自定义元素指令 elementDirective</div><div class="line"></div><div class="line">// 自定义键盘</div><div class="line">// @keydown.ctrl = &quot;show()&quot;</div><div class="line">// @keydown.mycustomenter = &quot;show()&quot;</div><div class="line">Vue.directive(&apos;on&apos;).keyCodes.ctrl = 17 // @1.x</div><div class="line">Vue.directive(&apos;on&apos;).keyCodes.mycustomenter = 13 //@1.x</div><div class="line">// Vue.config.keyCodes.ctrl=17 //@2.x</div><div class="line"></div><div class="line">// 监听数据变化</div><div class="line">vm.$watch(&apos;a&apos;, function()&#123;&#125;);</div><div class="line">// vm.$watch(&apos;obj&apos;, function()&#123;&#125;, &#123;deep: true&#125;);检测对象</div></pre></td></tr></table></figure>
+<h3 id="自定义组件"><a href="#自定义组件" class="headerlink" title="自定义组件"></a>自定义组件</h3><h4 id="全局组件"><a href="#全局组件" class="headerlink" title="全局组件"></a>全局组件</h4><p>方法1：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">&lt;body&gt;</div><div class="line">    &lt;div id=&quot;box&quot;&gt;</div><div class="line">        &lt;custom&gt;&lt;/custom&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">    &lt;script&gt;</div><div class="line">    	// only: vue@1.x can use</div><div class="line">        var Custom = Vue.extend(&#123;</div><div class="line">        	data: function()&#123;</div><div class="line">            	return &#123;</div><div class="line">                	title: &apos;我是自定义标题&apos;</div><div class="line">                &#125;</div><div class="line">            &#125;,</div><div class="line">            template: &apos;&lt;h3&gt;&#123;&#123;title&#125;&#125;&lt;/h3&gt;&apos;</div><div class="line">        &#125;)</div><div class="line">        Vue.component(&apos;custom&apos;, Custom);</div><div class="line">        </div><div class="line">        var vm = new Vue(&#123;</div><div class="line">            el: &apos;#box&apos;,</div><div class="line">        &#125;)</div><div class="line">    &lt;/script&gt;</div><div class="line">&lt;/body&gt;</div></pre></td></tr></table></figure>
+<p>方法2：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Vue.component(&apos;custom&apos;, &#123;</div><div class="line">	template: &apos;&lt;h3&gt;我是自定义模板&lt;/h3&gt;&apos;</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<h4 id="局部组件"><a href="#局部组件" class="headerlink" title="局部组件"></a>局部组件</h4><p>方法1：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var Custom = Vue.extend(&#123;</div><div class="line">    template: &apos;&lt;h3&gt;我是自定义模板&lt;/h3&gt;&apos;</div><div class="line">&#125;)</div><div class="line"></div><div class="line">var vm = new Vue(&#123;</div><div class="line">    el: &apos;#box&apos;,</div><div class="line">    components: &#123;</div><div class="line">    	custom: Custom</div><div class="line">    &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>方法2：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">new Vue(&#123;</div><div class="line">    el: &apos;#box&apos;,</div><div class="line">    components: &#123;</div><div class="line">        custom: &#123;</div><div class="line">            template: &apos;&lt;h3&gt;我是自定义模板&lt;/h3&gt;&apos;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<h4 id="讲模板中的html提取到外部"><a href="#讲模板中的html提取到外部" class="headerlink" title="讲模板中的html提取到外部"></a>讲模板中的html提取到外部</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;template id=&quot;custom&quot;&gt;</div><div class="line">    &lt;h3&gt;我是自定义模板&lt;/h3&gt;</div><div class="line">&lt;/template&gt;</div><div class="line">&lt;script&gt;</div><div class="line">    new Vue(&#123;</div><div class="line">        el: &apos;#box&apos;,</div><div class="line">        components: &#123;</div><div class="line">            custom: &#123;</div><div class="line">                template: &apos;#custom&apos;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;)</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<h4 id="动态组件"><a href="#动态组件" class="headerlink" title="动态组件"></a>动态组件</h4><p><component :is="组件名称"></component><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">&lt;body&gt;</div><div class="line">    &lt;div id=&quot;box&quot;&gt;</div><div class="line">        &lt;component :is=&quot;custom&quot;&gt;&lt;/component&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">    &lt;script&gt;</div><div class="line">        new Vue(&#123;</div><div class="line">            el: &apos;#box&apos;,</div><div class="line">            data: &#123;</div><div class="line">                custom: &apos;a&apos;  </div><div class="line">            &#125;,</div><div class="line">            components: &#123;</div><div class="line">                a: &#123;</div><div class="line">                    template: &apos;&lt;h1&gt;我是a&lt;/h1&gt;&apos;</div><div class="line">                &#125;,</div><div class="line">                b: &#123;</div><div class="line">                    template: &apos;&lt;h1&gt;我是b&lt;/h1&gt;&apos;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;)</div><div class="line">    &lt;/script&gt;</div><div class="line">&lt;/body&gt;</div></pre></td></tr></table></figure></p>
+<h4 id="调试工具"><a href="#调试工具" class="headerlink" title="调试工具"></a>调试工具</h4><p><code>dev-tools</code></p>
+<h4 id="父-gt-子组件数据传递"><a href="#父-gt-子组件数据传递" class="headerlink" title="父-&gt;子组件数据传递"></a>父-&gt;子组件数据传递</h4><p><code>props</code></p>
+<blockquote>
+<p>[‘msg’]</p>
+<p>{<br>    msg: String,<br>    num: Number<br>}</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">&lt;body&gt;</div><div class="line">    &lt;div id=&quot;box&quot;&gt;</div><div class="line">    	// @1.x中 .sync子组件更改，同步到父组件</div><div class="line">        // @2.x中，不允许使用.sync了</div><div class="line">        &lt;custom :root.sync=&quot;root&quot; :my-msg=&quot;msg&quot;&gt;&lt;/custom&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">    &lt;script&gt;</div><div class="line">        var vm = new Vue(&#123;</div><div class="line">            el: &apos;#box&apos;,</div><div class="line">            data: &#123;</div><div class="line">            	root: &apos;root var&apos;</div><div class="line">                msg: &apos;my msg&apos;</div><div class="line">            &#125;,</div><div class="line">            components: &#123;</div><div class="line">            	custom: &#123;</div><div class="line">				    props: [&apos;root&apos;, &apos;myMsg&apos;],</div><div class="line">                	template: &apos;&lt;h3&gt;&#123;&#123;root&#125;&#125; - &#123;&#123;myMsg&#125;&#125;&lt;/h3&gt;&apos;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;)</div><div class="line">    &lt;/script&gt;</div><div class="line">&lt;/body&gt;</div></pre></td></tr></table></figure>
+<h4 id="子-gt-父组件数据传递"><a href="#子-gt-父组件数据传递" class="headerlink" title="子-&gt;父组件数据传递"></a>子-&gt;父组件数据传递</h4><p><code>$emit</code>: 发送</p>
+<p>``</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">&lt;body&gt;</div><div class="line">    &lt;div id=&quot;box&quot;&gt;</div><div class="line">        &lt;custom @child-msg=&quot;get&quot;&gt;&lt;/custom&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">    &lt;script&gt;</div><div class="line">        var vm = new Vue(&#123;</div><div class="line">            el: &apos;#box&apos;,</div><div class="line">            data: &#123;&#125;,</div><div class="line">            methods: &#123;</div><div class="line">            	get: function(msg)&#123;</div><div class="line">                	// msg: &apos;sub title&apos;</div><div class="line">                &#125;</div><div class="line">            &#125;,</div><div class="line">            components: &#123;</div><div class="line">            	custom: &#123;</div><div class="line">	                template: &apos;&lt;h3&gt;&#123;&#123;title&#125;&#125;&lt;/h3&gt;&apos;</div><div class="line">                    data: function()&#123;</div><div class="line">                    	return &#123;</div><div class="line">                        	title: &apos;sub title&apos;</div><div class="line">                        &#125;</div><div class="line">                    &#125;,</div><div class="line">                    methods: &#123;</div><div class="line">                    	send: function()&#123;</div><div class="line">                        	this.$emit(&apos;child-msg&apos;, this.title)</div><div class="line">                        &#125;</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;)</div><div class="line">    &lt;/script&gt;</div><div class="line">&lt;/body&gt;</div></pre></td></tr></table></figure>
+<h3 id="slot-槽口"><a href="#slot-槽口" class="headerlink" title="slot 槽口"></a>slot 槽口</h3><h4 id="匿名slot"><a href="#匿名slot" class="headerlink" title="匿名slot"></a>匿名slot</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">&lt;body&gt;</div><div class="line">    &lt;div id=&quot;box&quot;&gt;</div><div class="line">        &lt;custom&gt;</div><div class="line">            &lt;p&gt;I&apos;m use slot&lt;/p&gt;</div><div class="line">        &lt;/custom&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">    &lt;template id=&quot;custom&quot;&gt;</div><div class="line">        &lt;h3&gt;我是自定义模板&lt;/h3&gt;</div><div class="line">        &lt;slot&gt;为空的默认值&lt;/slot&gt;</div><div class="line">        &lt;p&gt;footer&lt;/p&gt;</div><div class="line">    &lt;/template&gt;</div><div class="line">    &lt;script&gt;</div><div class="line">        new Vue(&#123;</div><div class="line">            el: &apos;#box&apos;,</div><div class="line">            components: &#123;</div><div class="line">                custom: &#123;</div><div class="line">                    template: &apos;#custom&apos;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;)</div><div class="line">    &lt;/script&gt;</div><div class="line">&lt;/body&gt;</div></pre></td></tr></table></figure>
+<h4 id="命名slot"><a href="#命名slot" class="headerlink" title="命名slot"></a>命名slot</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;custom&gt;</div><div class="line">	&lt;p slot=&quot;slot1&quot;&gt;I&apos;m use slot&lt;/p&gt;</div><div class="line">    &lt;p slot=&quot;slot2&quot;&gt;I&apos;m use slot&lt;/p&gt;</div><div class="line">&lt;/custom&gt;</div><div class="line">&lt;template id=&quot;custom&quot;&gt;</div><div class="line">	&lt;h3&gt;我是自定义模板&lt;/h3&gt;</div><div class="line">	&lt;slot name=&quot;slot1&quot;&gt;为空的slot1默认值&lt;/slot&gt;</div><div class="line">    &lt;slot name=&quot;slot2&quot;&gt;为空的slot2默认值&lt;/slot&gt;</div><div class="line">	&lt;p&gt;footer&lt;/p&gt;</div><div class="line">&lt;/template&gt;</div></pre></td></tr></table></figure>
+<h3 id="vue-router"><a href="#vue-router" class="headerlink" title="vue-router"></a>vue-router</h3>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
   <link itemprop="mainEntityOfPage" href="http://www.itrydo.com/2017/03/23/ruby基础/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -461,6 +644,158 @@
 <li>设置账号与电脑绑定</li>
 <li>gem push gem_name</li>
 </ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://www.itrydo.com/2017/03/04/ruby环境搭建/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="wsen">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="I Try Do">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="I Try Do" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/03/04/ruby环境搭建/" itemprop="url">
+                  ruby环境搭建
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-04T10:58:02+08:00">
+                2017-03-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/03/04/ruby环境搭建/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/04/ruby环境搭建/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/03/04/ruby环境搭建/" class="leancloud_visitors" data-flag-title="ruby环境搭建">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="安装配置"><a href="#安装配置" class="headerlink" title="安装配置"></a>安装配置</h3><p>rvm ruby ..</p>
+<p><a href="https://ruby-china.org/wiki" target="_blank" rel="external">ruby-china wike</a></p>
+<h4 id="RVM安装ruby"><a href="#RVM安装ruby" class="headerlink" title="RVM安装ruby"></a><a href="https://ruby-china.org/wiki/rvm-guide" target="_blank" rel="external">RVM安装ruby</a></h4><p>查看安装的ruby<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rvm list</div></pre></td></tr></table></figure></p>
+<p>安装指定版本ruby<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rvm install ruby 2.2.2</div></pre></td></tr></table></figure></p>
+<p>使用制定版本ruby<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rvm use 2.2.2</div></pre></td></tr></table></figure></p>
+<h4 id="gem源更换"><a href="#gem源更换" class="headerlink" title="gem源更换"></a>gem源更换</h4><p>查看所有<code>gem</code>源<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ gem sources -l</div></pre></td></tr></table></figure></p>
+<p>移除一个<code>gem</code>源<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ gem sources --remove https://rubygems.org/</div></pre></td></tr></table></figure></p>
+<p>添加一个<code>gem</code>源<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ gem source -a https://gems.ruby-china.org</div></pre></td></tr></table></figure></p>
+<h4 id="安装rails"><a href="#安装rails" class="headerlink" title="安装rails"></a>安装rails</h4><p>gem安装<code>rails</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ gem install rails -v 4.2.3</div></pre></td></tr></table></figure></p>
+<p><code>rails</code>创建项目<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ rails new [myPro] [--skip-bundle]</div></pre></td></tr></table></figure></p>
+<h4 id="路由配置"><a href="#路由配置" class="headerlink" title="路由配置"></a><a href="http://guides.ruby-china.org/routing.html" target="_blank" rel="external">路由配置</a></h4><p>eg:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"># 手动配置posts的show路由   as配置路由名称</div><div class="line">  # get &apos;posts/:id&apos;, :to =&gt; &apos;posts#show&apos;, :as =&gt; &apos;show_post&apos;</div><div class="line"></div><div class="line">  #  排除show路由</div><div class="line">  # resources :posts, :except =&gt; :show</div><div class="line"></div><div class="line">  resources :posts do</div><div class="line">    # posts/recent</div><div class="line">    # get &apos;recent&apos;, :on =&gt; :collection</div><div class="line">    #  集合路由</div><div class="line">    collection do</div><div class="line">      # posts/recent</div><div class="line">      get &apos;recent&apos;</div><div class="line">    end</div><div class="line">    #  成员路由</div><div class="line">    member do</div><div class="line">      # posts/:id/recent</div><div class="line">      get &apos;recent&apos;</div><div class="line">    end</div><div class="line">  end</div></pre></td></tr></table></figure></p>
 
           
         
@@ -1763,425 +2098,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://www.itrydo.com/2017/02/18/事件对象（event）/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="wsen">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/avatar.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="I Try Do">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="I Try Do" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/02/18/事件对象（event）/" itemprop="url">
-                  事件对象（event）
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-18T12:21:00+08:00">
-                2017-02-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/javascript/" itemprop="url" rel="index">
-                    <span itemprop="name">javascript</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/02/18/事件对象（event）/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/18/事件对象（event）/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2017/02/18/事件对象（event）/" class="leancloud_visitors" data-flag-title="事件对象（event）">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ul>
-<li><code>onabort</code>    图像加载被中断</li>
-<li><code>onblur</code>    元素失去焦点    </li>
-<li><code>onchange</code>    用户改变域的内容</li>
-<li><code>onclick</code>    鼠标点击某个对象</li>
-<li><code>ondblclick</code>    鼠标双击某个对象    </li>
-<li><code>onerror</code>    当加载文档或图像时发生某个错误</li>
-<li><code>onfocus</code>    元素获得焦点</li>
-<li><code>onkeydown</code>    某个键盘的键被按下</li>
-<li><code>onkeypress</code>    某个键盘的键被按下或按住</li>
-<li><code>onkeyup</code>    某个键盘的键被松开</li>
-<li><code>onload</code>    某个页面或图像被完成加载</li>
-<li><code>onmousedown</code>    某个鼠标按键被按下</li>
-<li><code>onmousemove</code>    鼠标被移动</li>
-<li><code>onmouseout</code>    鼠标从某元素移开</li>
-<li><code>onmouseover</code>    鼠标被移到某元素之上</li>
-<li><code>onmouseup</code>    某个鼠标按键被松开</li>
-<li><code>onreset</code>    重置按钮被点击</li>
-<li><code>onresize</code>    窗口或框架被调整尺寸</li>
-<li><code>onselect</code>    文本被选定</li>
-<li><code>onsubmit</code>    提交按钮被点击</li>
-<li><code>onunload</code>    用户退出页面</li>
-</ul>
-<h4 id="event对象有哪些属性或者方法"><a href="#event对象有哪些属性或者方法" class="headerlink" title="event对象有哪些属性或者方法"></a>event对象有哪些属性或者方法</h4><ul>
-<li><code>type</code>：事件类型。用来描述这个事件是什么类型的，比如onclick的事件类型为click。</li>
-<li><code>srcElement/target</code>：事件源，就是发生事件的元素； FF下是target，IE下是srcElement</li>
-<li><code>cancelBubble</code>：一个布尔属性，把它设置为true的时候，将停止事件进一步起泡到包容层次的元素；(e.cancelBubble = true; 相当于 e.stopPropagation();) 。FF下是后者。</li>
-<li><code>keyCode</code>: 这个不陌生了吧。也非常的常用，用来判断你按下了哪个键</li>
-<li><code>attachEvent(), detachEvent()/addEventListener(), removeEventListener</code>：为指定DOM对象事件类型注册多个事件处理函数的方法，它们有两个参数，第一个是事件类型，第二个是事件处理函数。在 attachEvent()事件执行的时候，this关键字指向的是window对象，而不是发生事件的那个元素；</li>
-</ul>
-<p>当然还有其他的一些属性，我这里列出来的都是最常用的。比如还有:<br><code>button</code>、 <code>clientX,clientY</code>、<code>offsetX,offsetY</code> <code>layerX,layerY</code>、<code>x,y</code> <code>pageX,pageY</code>、<code>altKey,ctrlKey,shiftKey</code>、<code>fromElement,toElement</code>、<code>screenX、screenY</code>。</p>
-<hr>
-<p>Event <code>altKey、ctrlKey、shiftKey</code>属性 </p>
-<blockquote>
-<ul>
-<li><code>event.altKey</code><ul>
-<li>功能：检测事件发生时Alt键是否被按住了。</li>
-<li>语法：event.altKey</li>
-<li>取值：true | false</li>
-<li>说明：<br>altKey属性为true表示事件发生时Alt键被按下并保持，为false则Alt键没有按下。 </li>
-<li>altKey属性可结合鼠标或键盘使用，多用于制作一些快捷操作方式。 </li>
-</ul>
-</li>
-</ul>
-</blockquote>
-<ul>
-<li><code>event.ctrlKey</code><ul>
-<li>功能：检测事件发生时Ctrl键是否被按住了。</li>
-<li>语法：event.ctrlKey</li>
-<li>取值：true | false</li>
-<li>说明： ctrlKey属性为true表示事件发生时Ctrl键被按下并保持，为false则Ctrl键没有按下。 </li>
-<li>ctrlKey属性可结合鼠标或键盘使用，多用于制作一些快捷操作方式。 </li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<ul>
-<li><code>event.shiftKey</code><ul>
-<li>功能：检测事件发生时Shift键是否被按住了。</li>
-<li>语法：event.shiftKey</li>
-<li>取值：true | false</li>
-<li>说明： shiftKey属性为true表示事件发生时Shift键被按下并保持，为false则Shift键没有按下。 </li>
-<li>shiftKey属性可结合鼠标或键盘使用，多用于制作一些快捷操作方式。 </li>
-</ul>
-</li>
-</ul>
-</blockquote>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://www.itrydo.com/2017/02/18/pm2部署服务器/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="wsen">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/avatar.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="I Try Do">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="I Try Do" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/02/18/pm2部署服务器/" itemprop="url">
-                  pm2部署服务器
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-18T11:59:00+08:00">
-                2017-02-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/node-js/" itemprop="url" rel="index">
-                    <span itemprop="name">node.js</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/02/18/pm2部署服务器/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/18/pm2部署服务器/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2017/02/18/pm2部署服务器/" class="leancloud_visitors" data-flag-title="pm2部署服务器">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h3><ul>
-<li><p>本地和服务器安装pm2</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g pm2</div></pre></td></tr></table></figure>
-</li>
-<li><p>使用pm2启动应用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ pm2 start xxx.js</div></pre></td></tr></table></figure>
-</li>
-<li><p>开发中启动，代码变更后自动重启应用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ pm2 start xxx.js --watch</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="cluster模式"><a href="#cluster模式" class="headerlink" title="cluster模式"></a>cluster模式</h3><p>默认情况下pm2是以<code>fork模式</code>启动应用的，如果以<code>cluster模式</code>启动的话，则可以使用pm2自带的负载均衡、零间断重启等功能。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ pm2 start xxx.js -i 4</div></pre></td></tr></table></figure></p>
-<p>上面的命令会以<code>cluster</code>模式启动4个应用进程，并自动为它们提供负载均衡，并且可以使<code>用gracefulRelo</code>ad达到更新应用时不中断服务的效果。</p>
-<h3 id="升级pm2"><a href="#升级pm2" class="headerlink" title="升级pm2"></a>升级pm2</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ npm install -g pm2@latest</div><div class="line">$ pm2 updatePM2</div></pre></td></tr></table></figure>
-<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><p>接下来需要建立一个部署的配置文件，这个文件在本机（操作发布的机器）和服务器上都需要有，因此最好放入Git版本管理中，并且推送到远程代码库（Git服务器）。</p>
-<p>切换到项目目录下，然后执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ pm2 ecosystem</div></pre></td></tr></table></figure></p>
-<p>即可得到一个示例json文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">&quot;apps&quot; : [&#123;</div><div class="line"> &quot;name&quot;      : &quot;API&quot;,</div><div class="line"> &quot;script&quot;    : &quot;app.js&quot;,</div><div class="line"> &quot;env&quot;: &#123;</div><div class="line">   &quot;COMMON_VARIABLE&quot;: &quot;true&quot;</div><div class="line"> &#125;,</div><div class="line"> &quot;env_production&quot; : &#123;</div><div class="line">   &quot;NODE_ENV&quot;: &quot;production&quot;</div><div class="line"> &#125;</div><div class="line">&#125;,&#123; //没有这个环境可以删除掉</div><div class="line"> &quot;name&quot;      : &quot;WEB&quot;,</div><div class="line"> &quot;script&quot;    : &quot;web.js&quot;</div><div class="line">&#125;],</div><div class="line">&quot;deploy&quot; : &#123;</div><div class="line"> &quot;production&quot; : &#123;</div><div class="line">   &quot;user&quot; : &quot;node&quot;,//登录账号</div><div class="line">   &quot;host&quot; : &quot;212.83.163.1&quot;,//服务器地址</div><div class="line">   &quot;ref&quot;  : &quot;origin/master&quot;,//git 分支</div><div class="line">   &quot;repo&quot; : &quot;git@github.com:wuyuedefeng/node-china.club.git&quot;,//git地址</div><div class="line">   &quot;path&quot; : &quot;/var/www/production&quot;,//服务器项目目录</div><div class="line">   &quot;post-deploy&quot; : &quot;pm2 startOrRestart ecosystem.json5 --env production&quot;</div><div class="line"> &#125;,</div><div class="line"> &quot;dev&quot; : &#123;</div><div class="line">   &quot;user&quot; : &quot;node&quot;,</div><div class="line">   &quot;host&quot; : &quot;212.83.163.1&quot;,</div><div class="line">   &quot;ref&quot;  : &quot;origin/master&quot;,</div><div class="line">   &quot;repo&quot; : &quot;git@github.com:repo.git&quot;,</div><div class="line">   &quot;path&quot; : &quot;/var/www/development&quot;,</div><div class="line">   &quot;post-deploy&quot; : &quot;pm2 startOrRestart ecosystem.json5 --env dev&quot;,</div><div class="line">   &quot;env&quot;  : &#123;</div><div class="line">     &quot;NODE_ENV&quot;: &quot;dev&quot;</div><div class="line">   &#125;</div><div class="line"> &#125;</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<ul>
-<li><code>apps.name</code>和<code>apps.script</code>应该与PM2识别应用有关，后续执行pm2 restart的时候可以对应到进程（未证实）</li>
-<li>deploy中可以含有多个环境，需要能够通过SSH（公钥认证）登录服务器</li>
-<li><code>web</code>目录并不是真正的放版本库文件的目录，PM2会再建立一个source子目录，这个才是真正放代码的目录</li>
-<li><code>post-deploy</code>是指代码部署完之后执行的命令，这里以Node.js为例子，执行依赖安装，然后重启PM2中的进程 然后就可以使用了</li>
-</ul>
-<p>首先需要安装一下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ pm2 deploy ecosystem.json production setup</div></pre></td></tr></table></figure></p>
-<p>如果已经安装可以运行下面这个命令进行部署(需要添加服务器的ssh key到github上)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ pm2 deploy ecosystem.json production</div></pre></td></tr></table></figure></p>
-<p>大功告成！</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -2231,7 +2147,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
