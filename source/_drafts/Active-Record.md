@@ -11,85 +11,52 @@ date: 2017-03-05 21:22:00
 ### 数据类型
 rails中在mysql，postgresql， sqlite中的类型对照表
 [参考](http://www.packtpub.com/article/Working-with-Rails-ActiveRecord-Migrations-Models-Scaffolding-and-Database-Completion)
-<table>
-<tr>
-<td width="86" height="17"><strong><span>Rails</span></strong></td>
-<td width="86"><strong><span >mysql</span></strong></td>
-<td width="86"><strong><span >postgresql</span></strong></td>
-<td width="86"><strong><span >sqlite</span></strong></td>
-</tr>
-<tr>
-<td height="17">:binary</td>
-<td>blob</td>
-<td>bytea</td>
-<td>blob</td>
-</tr>
-<tr>
-<td height="17">:boolean</td>
-<td>tinyint(1)</td>
-<td>boolean</td>
-<td>boolean</td>
-</tr>
-<tr>
-<td height="17">:date</td>
-<td>date</td>
-<td>date</td>
-<td>date</td>
-</tr>
-<tr>
-<td height="17">:datetime</td>
-<td>datetime</td>
-<td>timestamp</td>
-<td>datetime</td>
-</tr>
-<tr>
-<td height="17">:decimal</td>
-<td>decimal</td>
-<td>decimal</td>
-<td>decimal</td>
-</tr>
-<tr>
-<td height="17">:float</td>
-<td>float</td>
-<td>float</td>
-<td>float</td>
-</tr>
-<tr>
-<td height="17">:integer</td>
-<td>int(11)</td>
-<td>integer</td>
-<td>integer</td>
-</tr>
-<tr>
-<td height="17">:string</td>
-<td>varchar(255)</td>
-<td>*</td>
-<td>varchar(255)</td>
-</tr>
-<tr>
-<td height="17">:text</td>
-<td>text</td>
-<td>text</td>
-<td>text</td>
-</tr>
-<tr>
-<td height="17">:time</td>
-<td>time</td>
-<td>time</td>
-<td>datetime</td>
-</tr>
-<tr>
-<td height="17">:timestamp</td>
-<td>datetime</td>
-<td>timestamp</td>
-<td>datetime</td>
-</tr>
-</table>
+
+
+| Rails    |  mysql    |  postgresql  |  sqlite  |
+| ---------|:---------:|:------------:| -----:   |
+| :binary  | blob      | bytea        | blob     |
+| :boolean | tinyint(1)| boolean      | boolean  |
+| :date    | date      | date         | date     |
+| :datetime| datetime  | timestamp    | datetime |
+| :decimal | decimal   | decimal      | decimal  |
+| :float   | float     | float        | float    |
+| :integer | int(11)   | integer      | integer  |
+| :string  |varchar(255)| *           | varchar(255)|
+| :text    |text        | text        | text     |
+| :time    |time        | time        | datetime |
+| :timestamp|datetime   | timestamp   | datetime |
+
+
+
+### 初始化项目
+
+#### 创建项目
+```
+$ rails new wechat
+```
+#### 创建model
+```
+rails g model User username:string phone:string:index age:integer
+```
+
+#### 执行与回滚迁移文件
+```
+bundle exec rake db:migrate
+bundle exec rake db:rollback
+# 回滚两步
+bundle exec rake db:rollback STEP=2
+```
+
+#### 进入控制台
+```
+rails c
+```
 
 ### 数据模型
 #### 创建`users`表
 ```
-$ rails g model User phone:string email:string
+$ rails g model User phone:string:index email:string age:integer
 ```
 #### 修改数据表
 假设数据库中的表名为`USER`，显式指定`User`模型关联`USER`数据表，负责默认表名为：`users`
@@ -243,18 +210,17 @@ end
 ```
 
 
-
-
-
-
-
-
-
-
-
 #### 判断数据是否合法
 * valid?  判断是否合法
 * invalid? 判断是否不合法
+
+#### 验证错误信息
+```
+u = User.new
+u.valid?      # if false
+u.errors.messages # return hash
+u.errors[:name] # name属性不合法的信息描述
+```
 
 #### 跳过数据验证方法
 * save(validate: false)
@@ -262,8 +228,30 @@ end
 * update_column
 * update_columns
 * update_attibute
+* update_counters
 * touch
-* ...
+* toggle!
+* increment_counter
+* increment!
+* decrement_counter
+* decrement!
+
+
+#### 验证失败错误信息
+```
+# 创建
+u = User.new
+# 验证
+u.valid?
+# 查看验证错误信息
+u.errors.messages
+# 添加name属性的错误信息
+u.errors[:name] < '用户名不能为空'
+# 等价于
+u.errors.add(:name, '用户名不能为空')
+# 查看错误条数
+u.errors.size
+```
 
 ### 回调
 
