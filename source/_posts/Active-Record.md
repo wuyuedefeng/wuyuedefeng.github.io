@@ -34,6 +34,8 @@ rails中在mysql，postgresql， sqlite中的类型对照表
 #### 创建项目
 ```
 $ rails new wechat
+$ rails new wechat [--skip-bundle] # skip bundle install
+$ rails new wechat -d mysql # use mysql as database
 ```
 #### 创建model
 ```
