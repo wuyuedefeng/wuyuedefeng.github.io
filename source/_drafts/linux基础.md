@@ -92,9 +92,3 @@ $ chmod go-rw iphone6
 
 
 
-
-
-
-
-
-
