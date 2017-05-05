@@ -10,6 +10,7 @@ date: 2017-04-26 09:28:00
 ### important参考文章
 * http://thelazylog.com/deploying-rails-application-with-nginx-puma-and-mina/
 * https://gorails.com/deploy/ubuntu/
+* http://xufei.logdown.com/posts/2014/03/05/rails-mina-puma-nginx
 
 ### 用户管理
 
