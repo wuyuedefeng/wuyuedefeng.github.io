@@ -7,6 +7,10 @@ categories:
   - linux
 date: 2017-04-26 09:28:00
 ---
+### important参考文章
+* http://thelazylog.com/deploying-rails-application-with-nginx-puma-and-mina/
+* https://gorails.com/deploy/ubuntu/
+
 ### 用户管理
 
 #### 查询当前用户信息
@@ -131,7 +135,7 @@ sudo service nginx restart
 vim /etc/nginx/sites-available/wedesign.conf
 ```
 upstream wedesign {
-  server unix:///mnt/www/wedesign/shared/tmp/sockets/wedesign.sock;
+  server unix:///mnt/www/wedesign/shared/tmp/sockets/puma.sock;
 }
 
 server {
@@ -170,7 +174,9 @@ sudo nginx -t -c /etc/nginx/nginx.conf
 ```
 mina
 ```
-bundle exec puma -e production -b unix:///mnt/www/wedesign/shared/tmp/sockets/wedesign.sock
+bundle exec puma -e production -b unix:///mnt/www/wedesign/shared/tmp/sockets/puma.sock
+# 后台启动 -d
+bundle exec puma -e production -d -b unix:///mnt/www/wedesign/shared/tmp/sockets/puma.sock
 ```
 
 ### 安装git
