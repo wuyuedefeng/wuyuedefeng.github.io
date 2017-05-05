@@ -53,6 +53,7 @@ trs.forEach(function (el, index) {
 
   el.onmouseup = function (event) {
     currentDragEl.style.display = 'block'
+    el.index = cloneEl.index
     parentNode.removeChild(cloneEl)
   }
 })
