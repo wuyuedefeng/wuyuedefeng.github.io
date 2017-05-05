@@ -18,6 +18,7 @@ var parentNode = document.querySelector('.draggable-items tbody')
 var trs = parentNode.querySelectorAll('tr')
 trs.forEach(function (el, index) {
   el.setAttribute('draggable', true)
+  el.orSeq = index
   el.index = index
 
   el.onmousedown = function (event) {
@@ -26,6 +27,12 @@ trs.forEach(function (el, index) {
     cloneEl.index = el.index
     el.style.display = 'none'
     currentDragEl = el
+
+    cloneEl.onmouseup = el.onmouseup = function (event) {
+      currentDragEl.style.display = 'table-row'
+      el.index = cloneEl.index
+      parentNode.removeChild(cloneEl)
+    }
   }
 
   el.ondragover = function (event) {
@@ -49,12 +56,6 @@ trs.forEach(function (el, index) {
       parentNode.insertBefore(cloneEl, el)
       cloneEl.index = nowElIndex
     }
-  }
-
-  el.onmouseup = function (event) {
-    currentDragEl.style.display = 'block'
-    el.index = cloneEl.index
-    parentNode.removeChild(cloneEl)
   }
 })
 ```
