@@ -28,10 +28,12 @@ trs.forEach(function (el, index) {
     el.style.display = 'none'
     currentDragEl = el
 
-    cloneEl.onmouseup = el.onmouseup = function (event) {
-      currentDragEl.style.display = 'table-row'
-      el.index = cloneEl.index
+    cloneEl.onmouseup = currentDragEl.onmouseup = function (event) {
+      currentDragEl.index = cloneEl.index
+      parentNode.removeChild(currentDragEl)
+      parentNode.insertBefore(currentDragEl, cloneEl)
       parentNode.removeChild(cloneEl)
+      currentDragEl.style.display = 'table-row'
     }
   }
 
