@@ -288,3 +288,91 @@ cd /mnt/www/wedesign/current
 # then run 
 rake db:create RAILS_ENV=production
 ```
+
+
+
+### 成功部署相关配置
+
+#### /mnt/www/wedesign/shared/config/
+puma.rb
+```
+#!/usr/bin/env puma
+
+environment "production"
+
+daemonize true
+workers 2
+threads 2,16
+
+bind "unix:///mnt/www/wedesign/shared/tmp/sockets/puma.sock"
+
+pidfile "/mnt/www/wedesign/shared/tmp/pids/puma.pid"
+state_path "/mnt/www/wedesign/shared/tmp/sockets/puma.state"
+
+stdout_redirect '/mnt/www/wedesign/shared/log/stdout', '/mnt/www/wedesign/shared/log/stderr'
+
+directory "/mnt/www/wedesign/current"
+
+activate_control_app 'unix:///mnt/www/wedesign/shared/tmp/sockets/pumactl.sock'
+
+prune_bundler
+```
+database.yml
+```
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: root
+  password:
+  host: localhost
+production:
+  <<: *default
+  database: [project_database_name]
+  username: [database_username]
+  password: [database_password]
+```
+secrets.yml 
+```
+production:
+  #secret_key_base: <%= ENV["SECRET_KEY_BASE"] %>
+  # or run rake secret
+  secret_key_base: [secret_key]
+```
+
+### /etc/nginx/sites-available/
+wedesign.conf
+```
+upstream wedesign {
+  server unix:///mnt/www/wedesign/shared/tmp/sockets/puma.sock;
+}
+
+server {
+  listen 80;
+  server_name rails.itrydo.com; # change to match your URL
+  root /mnt/www/wedesign/shared/public/assets; # I assume your app is located at that location
+
+  location / {
+    proxy_pass http://wedesign; # match the name of upstream directive which is defined above
+    proxy_set_header Host $host;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+  }
+
+  location ~* ^/assets/ {
+    # Per RFC2616 - 1 year maximum expiry
+    expires 1y;
+    add_header Cache-Control public;
+
+    # Some browsers still send conditional-GET requests if there's a
+    # Last-Modified header or an ETag header even if they haven't
+    # reached the expiry date sent in the Expires header.
+    add_header Last-Modified "";
+    add_header ETag "";
+    break;
+  }
+}
+```
+then
+```
+$ sudo ln -sf /etc/nginx/sites-available/wedesign.conf /etc/nginx/sites-enabled/wedesign.conf
+```
