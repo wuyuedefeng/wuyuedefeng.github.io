@@ -6,10 +6,9 @@ categories:
   - git
 date: 2017-05-06 22:39:00
 ---
-
 ### 命令大全
 
-![png](https://github.com/wuyuedefeng/wuyuedefeng.github.io/blob/develop/images/git-commands.png)
+![png](https://raw.githubusercontent.com/wuyuedefeng/wuyuedefeng.github.io/develop/images/git-commands.png)
 
 ### 删除git代码管理中已经提交的服务器的提交
 ```
@@ -28,4 +27,3 @@ git config --global credential.helper osxkeychain
 【参考资料】
 
 [Git keeps prompting me for password](http://stackoverflow.com/questions/7773181/git-keeps-prompting-me-for-password)
-
