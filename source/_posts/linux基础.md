@@ -350,7 +350,7 @@ upstream wedesign {
 server {
   listen 80;
   server_name rails.itrydo.com; # change to match your URL
-  root /mnt/www/wedesign/shared/public/assets; # I assume your app is located at that location
+  root /mnt/www/wedesign/shared/public; # I assume your app is located at that location
 
   location / {
     proxy_pass http://wedesign; # match the name of upstream directive which is defined above
