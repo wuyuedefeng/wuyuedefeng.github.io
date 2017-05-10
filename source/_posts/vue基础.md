@@ -27,11 +27,12 @@ var vm = new Vue({
             }
         }
     },
-    // 过滤器 currency capitalize uppercase downcase debounce(ms) limitBy(count, index=0) filterBy(str) orderBy(1/-1) ...
+    // 过滤器@1.x currency capitalize uppercase downcase debounce(ms) limitBy(count, index=0) filterBy(str) orderBy(1/-1) ...
     fileters: {
     
     },
     
+    // @1.x transition
     // 动画过度 可通过类定义，也可使用transitions
     // <div class="animated" v-show="toggle" transition="bounce"></div>
     // 这里的class animated是animate.css做动画必须类！
@@ -42,10 +43,24 @@ var vm = new Vue({
         }
     },
     
+    // @2.x transition
+    // .fade-enter{} // 初始状态
+    // .fade-enter-active{} //变化成的状态->显示
+    // .fade-leave{}
+    // .fade-leave-active{} //变化成的状态->离开(消失)
+    <transition name="fade" @before-enter="beforeEnter()" @enter="enter()" @after-enter="afterEnter" @before-leave="beforeLeave" @leave="leave" @after-leave="afterLeave">
+    	<p></p>
+    </transition>
+    
+    //2.x 结合animate.css使用
+    <transition enter-active-class="zoomInLeft" leave-active-class="bounceOutRight">
+    	<p class="animated" v-show="show"></p>
+    </transition
+    
     created: function(){}, // 创建之后
-    beforeCompile: function(){}, // 编译之前
-    compiled: function(){}, // 变异之后
-    ready: function(){}, //节点插入到文档
+    beforeCompile: function(){}, // 编译之前 @1.x
+    compiled: function(){}, // 变异之后 @1.x
+    ready: function(){}, //节点插入到文档 @1.x
     
     beforeDestroy: function(){}, //销毁之前
     destroyed: function(){} // 销毁之后
@@ -82,8 +97,9 @@ Vue.directive('red', function(){
 // 自定义键盘
 // @keydown.ctrl = "show()"
 // @keydown.mycustomenter = "show()"
-Vue.directive('on').keyCodes.ctrl = 17
-Vue.directive('on').keyCodes.mycustomenter = 13
+Vue.directive('on').keyCodes.ctrl = 17 // @1.x
+Vue.directive('on').keyCodes.mycustomenter = 13 //@1.x
+// Vue.config.keyCodes.ctrl=17 //@2.x
 
 // 监听数据变化
 vm.$watch('a', function(){});
@@ -102,6 +118,7 @@ vm.$watch('a', function(){});
         <custom></custom>
     </div>
     <script>
+    	// only: vue@1.x can use
         var Custom = Vue.extend({
         	data: function(){
             	return {
@@ -211,7 +228,9 @@ new Vue({
 ```
 <body>
     <div id="box">
-        <custom :root="root" :my-msg="msg"></custom>
+    	// @1.x中 .sync子组件更改，同步到父组件
+        // @2.x中，不允许使用.sync了
+        <custom :root.sync="root" :my-msg="msg"></custom>
     </div>
     <script>
         var vm = new Vue({
@@ -221,8 +240,8 @@ new Vue({
                 msg: 'my msg'
             },
             components: {
-	            props: ['root', 'myMsg']
             	custom: {
+				    props: ['root', 'myMsg'],
                 	template: '<h3>{{root}} - {{myMsg}}</h3>'
                 }
             }
@@ -315,5 +334,3 @@ new Vue({
 
 
 ### vue-router
-
-
