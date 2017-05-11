@@ -223,6 +223,7 @@ new Vue({
 })
 ```
 
+<<<<<<< HEAD
 ### 图片路径问题
 [参考](https://github.com/zousandian/notes/issues/20)
 
@@ -285,8 +286,52 @@ const  data = [{
     img: require('../assets/pic02.png')
 }]
 ```
+=======
+### dev 和 pro 配置不同的变量
+
+比如 api host
+首先，我们分别找到下面的文件：
+```
+/config/dev.env.js
+/config/prod.env.js
+```
+
+dev.en.js文件。代码如下：
+```
+var merge = require('webpack-merge')
+var prodEnv = require('./prod.env')
+
+module.exports = merge(prodEnv, {
+  NODE_ENV: '"development"',
+  API_ROOT: '"http://test.itrydo.com/api"'
+})
+```
+prod.env.js文件:
+```
+module.exports = {
+  NODE_ENV: '"production"',
+  API_ROOT: '"http://www.baidu.com/api"'
+}
+```
+在代码中调用设置好的参数:
+
+```
+// 配置API接口地址
+var root = process.env.API_ROOT
+```
+在经过这样的配置之后，我们在运行
+```
+npm run dev
+```
+的时候，跑的就是测试接口。而我们运行
+```
+npm run build
+```
+打包项目的时候，打包的是服务器正式接口，我们就不用调来调去得了。
+
+>>>>>>> 403e670eda1b20c855b845ea81b6c1689b4e28e4
 ---
-#### 问题列表
+### 问题列表
 
 * vue-cli build后 Webfonts字体路径引用出错的问题
  找到 `webpack.base.conf.js`替换
