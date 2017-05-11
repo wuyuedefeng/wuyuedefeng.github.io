@@ -223,6 +223,68 @@ new Vue({
 })
 ```
 
+### 图片路径问题
+[参考](https://github.com/zousandian/notes/issues/20)
+
+配置alias
+```
+resolve: {
+  extensions: ['', '.js', '.vue'],
+  alias: {
+    'assets': path.resolve(__dirname, '../src/assets')
+  }
+}
+```
+使用：
+```
+<img src="~asset/pic.png"></img>
+```
+
+如果配置了 vue html root
+```
+vue: {
+  html: {
+    root: path.resolve(__dirname, '../src/assets')
+  }
+}
+```
+则可以在任何子目录中直接写
+```
+<img src="/pic.png"></img>
+```
+
+动态渲染的图片
+
+如果是有规律的重复出现的组件通常通过 v-for 来渲染，通过数组或对象来插入数据。
+比如
+```
+const  data = [{
+    title: 'title1',
+    img: '../assets/pic01.png'
+  }, {
+    title: 'title2',
+    img: '../assets/pic02.png'
+}]
+
+<my-compo v-for="item in data">
+  <img :src="item.img"></img>
+</my-compo>
+```
+这样的问题是 webpack 不会对 src 做任何操作，会原样输出导致 404 错误
+```
+<img src="../assets/pic01.png"></img>
+```
+这是因为渲染操作是在浏览器完成的。
+解决办法是使用 require 引入图片让 webpack 在 build 的时候就知道要处理它们
+```
+const  data = [{
+    title: 'title1',
+    img: require('../assets/pic01.png')
+  }, {
+    title: 'title2',
+    img: require('../assets/pic02.png')
+}]
+```
 ---
 #### 问题列表
 
