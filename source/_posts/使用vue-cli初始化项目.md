@@ -343,7 +343,7 @@ resolve: {
 ```
 则可以在任何子目录中直接写
 ```
-<img src="~asset/pic.png"></img>
+<img src="~assets/pic.png"></img>
 ```
 
 动态渲染的图片
