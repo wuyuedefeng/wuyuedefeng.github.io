@@ -90,13 +90,10 @@ deploy:
     - type: git
       repository: https://github.com/wuyuedefeng/wuyuedefeng.github.io.git
       branch: master
-    - type: rsync
-      host: 123.56.69.8
-      user: nodeChina
-      root: /usr/apps/gitPros/wuyuedefeng.github.io
-      port: 22
-      delete: true
-      verbose: true
-      ignore_errors: false
-
-
+#      host: 123.56.69.8
+#      user: nodeChina
+#      root: /usr/apps/gitPros/wuyuedefeng.github.io
+#      port: 22
+#      delete: true
+#      verbose: true
+#      ignore_errors: false
