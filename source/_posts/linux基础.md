@@ -219,7 +219,8 @@ rbenv local 2.4.1
 gem install bundler
 ```
 
-# 安装mysql
+
+### 安装mysql
 
 检查系统中是否已经安装了MySQL
 ```
