@@ -223,7 +223,6 @@ new Vue({
 })
 ```
 
-<<<<<<< HEAD
 ### 图片路径问题
 [参考](https://github.com/zousandian/notes/issues/20)
 
@@ -286,7 +285,18 @@ const  data = [{
     img: require('../assets/pic02.png')
 }]
 ```
-=======
+### 生成dist相对路径[默认绝对路径]
+修改 `/config/index.js` 
+
+build config
+
+```
+assetsPublicPath: '/'
+```
+改为
+```
+assetsPublicPath: './'
+```
 ### dev 和 pro 配置不同的变量
 
 比如 api host

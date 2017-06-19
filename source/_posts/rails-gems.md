@@ -3,7 +3,7 @@ author: wsen
 date: 2017-06-14 17:45:17
 tags:
 ---
-### [Rails的环境变量](https://braavos.me/blog/2014/08/05/rails-env/)
+### [Rails的环境变量设置](https://braavos.me/blog/2014/08/05/rails-env/)
 * [gem `Figaro`](https://github.com/laserlemon/figaro)
 
 ### tree型结构
@@ -30,4 +30,6 @@ tags:
 ### 更友好的展示错误页
 * [gem `better_errors`](https://github.com/charliesome/better_errors)
 
-
+### api数据验证
+* [gem dry-validation](https://github.com/dry-rb/dry-validation)
+*  [gem 'rails_param'](https://github.com/nicolasblanco/rails_param)
