@@ -33,3 +33,17 @@ tags:
 ### api数据验证
 * [gem dry-validation](https://github.com/dry-rb/dry-validation)
 *  [gem 'rails_param'](https://github.com/nicolasblanco/rails_param)
+
+### cros
+* [gem rack-cors](https://github.com/cyu/rack-cors)
+
+配置application.rb
+```
+# Rails 5
+  config.middleware.insert_before 0, 'Rack::Cors', debug: false do
+    allow do
+      origins (ENV['CORS_HOSTS'] ? ENV['CORS_HOSTS'].split(',') : '*')
+      resource '*', headers: :any, methods: :any, credentials: false
+    end
+  end
+```
