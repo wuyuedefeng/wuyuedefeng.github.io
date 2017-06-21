@@ -8,18 +8,18 @@ tags:
 
 ### tree型结构
 * gem `ancestry`
- * [github](https://github.com/stefankroes/ancestry) 
- * [ruby-china wiki](https://ruby-china.org/wiki/rails_plugin_ancestry_usage)
+* [github](https://github.com/stefankroes/ancestry) 
+* [ruby-china wiki](https://ruby-china.org/wiki/rails_plugin_ancestry_usage)
 
 ### 搜索条件过滤
 * gem `ransack`
- * [github](https://github.com/activerecord-hackery/ransack)
- * [ruby-child post](http://ruby-china.org/topics/29556)
+* [github](https://github.com/activerecord-hackery/ransack)
+* [ruby-child post](http://ruby-china.org/topics/29556)
 
 ### 构建积分,等级,徽章
 * gem `merit`
- * [github](https://github.com/merit-gem/merit)
- * [用更优雅的方式构建的网站的积分，等级，徽章系统](https://ruby-china.org/topics/3571)
+* [github](https://github.com/merit-gem/merit)
+* [用更优雅的方式构建的网站的积分，等级，徽章系统](https://ruby-china.org/topics/3571)
  
 ### 状态机
 * [gem `aasm`](https://github.com/aasm/aasm)
@@ -30,11 +30,12 @@ tags:
 ### 更友好的展示错误页
 * [gem `better_errors`](https://github.com/charliesome/better_errors)
 
-### api数据验证
+### api 表单验证，数据验证
+* [gem reform](https://github.com/trailblazer/reform)
 * [gem dry-validation](https://github.com/dry-rb/dry-validation)
-*  [gem 'rails_param'](https://github.com/nicolasblanco/rails_param)
+*  [gem rails_param](https://github.com/nicolasblanco/rails_param)
 
-### cros
+### cors
 * [gem rack-cors](https://github.com/cyu/rack-cors)
 
 配置application.rb
@@ -47,3 +48,9 @@ tags:
     end
   end
 ```
+
+### 加标签[tag]
+* [gem acts-as-taggable-on](https://github.com/mbleigh/acts-as-taggable-on)
+
+### 权限管理
+* [gem Pundit](https://github.com/elabs/pundit)
