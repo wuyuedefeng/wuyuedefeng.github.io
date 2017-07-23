@@ -393,6 +393,26 @@ const  data = [{
 
 https://github.com/MoOx/postcss-cssnext
 
+### 压缩支持gzip
+
+编辑config/index 
+```
+productionGzip: true
+```
+
+### webpack忽略某个文件夹的编译
+编辑build中的webpack.base.conf.js
+```
+resolve: {
+    extensions: ['.js', '.vue', '.json'],
+    alias: {}
+  },
+  module: {
+    noParse: [/videojs-contrib-hls/], // 添加该行
+    rules: []
+  }
+```
+
 ---
 ### 问题列表
 
