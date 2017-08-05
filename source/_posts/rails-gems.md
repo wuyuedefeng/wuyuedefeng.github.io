@@ -15,11 +15,16 @@ tags:
 * gem `ransack`
 * [github](https://github.com/activerecord-hackery/ransack)
 * [ruby-child post](http://ruby-china.org/topics/29556)
+* [ransack enum question resolve](http://techqa.info/programming/question/37257835/Searching-on-an-Enum-Field-with-Ransack)
 
 ### 构建积分,等级,徽章
 * gem `merit`
 * [github](https://github.com/merit-gem/merit)
 * [用更优雅的方式构建的网站的积分，等级，徽章系统](https://ruby-china.org/topics/3571)
+
+### 用户活跃度
+* gem `activerecord-reputation-system`
+* [github](https://github.com/twitter/activerecord-reputation-system)
  
 ### 状态机
 * [gem `aasm`](https://github.com/aasm/aasm)
@@ -32,6 +37,7 @@ tags:
 
 ### api 表单验证，数据验证
 * [gem reform](https://github.com/trailblazer/reform)
+> [gem reform validation usage](http://trailblazer.to/gems/reform/validation.html#uniqueness-validation)
 * [gem dry-validation](https://github.com/dry-rb/dry-validation)
 *  [gem rails_param](https://github.com/nicolasblanco/rails_param)
 

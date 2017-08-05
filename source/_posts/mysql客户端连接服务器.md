@@ -32,3 +32,18 @@ update user set host = '%' where user = 'mars';
  ```
 mysql> FLUSH PRIVILEGES;
 ```
+
+### 配置参数
+
+MySql 5.7
+```
+/etc/mysql/mysql.conf.d/mysqld.cnf
+```
+below versions
+```
+/etc/mysql/my.cnf
+```
+
+modify to
+
+`bind-address = 0.0.0.0`

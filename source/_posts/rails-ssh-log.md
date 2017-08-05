@@ -1,11 +1,11 @@
-title: rails ssh log
+title: rails ssh login
 author: wsen
 date: 2017-07-24 11:54:39
 tags:
 ---
 ```
 require 'net/ssh'
-host = '13.19.17.24'
+host = '13.19.13.24'
 username = 'deploy'
 port = 5331
 #连接服务器，执行 tail -f 指令
