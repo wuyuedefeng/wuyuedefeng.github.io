@@ -29,7 +29,7 @@ server {
 }
 ```
  
-# vue https config
+### vue https config
 ```
 server {
   listen 443;
@@ -57,7 +57,6 @@ server {
 }
 ```
  
-
 ### rails config
 ```
 upstream waimai {
