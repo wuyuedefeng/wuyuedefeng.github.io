@@ -129,3 +129,12 @@ server {
   
 } 
 ```
+
+### 代码段
+#### wap访问www,重定向到wap
+```
+server_name  www.itrydo.com;
+if ( $http_user_agent ~* "(Android|iPhone|Windows Phone|UC|Kindle)" ){
+   rewrite  ^/(.*)$  http://wap.itrydo.com$uri redirect;
+}
+```
