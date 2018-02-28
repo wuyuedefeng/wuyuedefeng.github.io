@@ -64,6 +64,7 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: next
+lazyload: true
 
 baidu_url_submit:
   count: 1 ## 提交最新的一个链接
