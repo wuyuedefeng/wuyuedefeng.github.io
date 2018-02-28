@@ -66,6 +66,9 @@ pagination_dir: page
 theme: next
 lazyload: true
 
+duoshuo:
+  enable: false
+
 baidu_url_submit:
   count: 1 ## 提交最新的一个链接
   host: wuyuedefeng.github.io/ ## 在百度站长平台中注册的域名
@@ -88,9 +91,9 @@ admin:
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-    - type: git
-      repository: https://github.com/wuyuedefeng/wuyuedefeng.github.io.git
-      branch: master
+  - type: git
+    repository: https://github.com/wuyuedefeng/wuyuedefeng.github.io.git
+    branch: master
 #      host: 123.56.69.8
 #      user: nodeChina
 #      root: /usr/apps/gitPros/wuyuedefeng.github.io
