@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[axios请求前请求用户信息]]></title>
+    <title><![CDATA[vue axios请求前请求用户信息]]></title>
     <url>%2F2019%2F02%2F28%2Faxios%E8%AF%B7%E6%B1%82%E5%89%8D%E8%AF%B7%E6%B1%82%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF%2F</url>
     <content type="text"><![CDATA[123456789101112131415161718192021222324252627282930313233343536373839const cusAxios = axios.create(&#123; baseURL: process.env.API_HOST, timeout: 15000&#125;)// cusAxios.defaults.headers.post[&apos;Content-Type&apos;] = &apos;application/x-www-form-urlencoded&apos;;// Add a request interceptorlet userInfoPromise = nullcusAxios.interceptors.request.use((config) =&gt; &#123; console.log(&apos;begin api:&apos;, config.url) return new Promise((resolve) =&gt; &#123; let accessToken = store.getters[&apos;user/accessToken&apos;] getUserInfo().then(userInfo =&gt; &#123; console.log(&apos;userInfo&apos;, userInfo) if (accessToken) &#123; config.headers.Authorization = `Bearer $&#123;accessToken&#125;` &#125; loadingBar.start() console.log(&apos;after get userInfo api:&apos;, config.url) resolve(config) &#125;) &#125;)&#125;, function (error) &#123; // Do something with request error loadingBar.close() return Promise.reject(error)&#125;)function getUserInfo () &#123; if (!userInfoPromise) &#123; console.log(&apos;begin get userInfo&apos;) userInfoPromise = new Promise(resolve =&gt; &#123; setTimeout(() =&gt; &#123; console.log(&apos;request get userInfo finished&apos;) resolve(&#123;aaa: 111&#125;) &#125;, 5000) &#125;) &#125; return userInfoPromise.then(info =&gt; info)&#125; 测试： 12345678910[HMR] Waiting for update signal from WDS...api.js?93af:16 begin api: /api/web/um/user/queryUserapi.js?93af:38 begin get userInfoNavMain.vue?d842:38 &#123;name: &quot;ManageAlumni&quot;, meta: &#123;…&#125;, path: &quot;/PersonalOrganization/manageAlumni&quot;, hash: &quot;&quot;, query: &#123;…&#125;, …&#125;api.js?93af:16 begin api: /api/web/um/student/queryPageapi.js?93af:41 request get userInfo finishedapi.js?93af:21 userInfo &#123;aaa: 111&#125;api.js?93af:26 after get userInfo api: /api/web/um/user/queryUserapi.js?93af:21 userInfo &#123;aaa: 111&#125;api.js?93af:26 after get userInfo api: /api/web/um/student/queryPage]]></content>
+      <categories>
+        <category>vue</category>
+      </categories>
   </entry>
   <entry>
     <title><![CDATA[Vue 页面过渡动画]]></title>
