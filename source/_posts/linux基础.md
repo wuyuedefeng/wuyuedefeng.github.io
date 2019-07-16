@@ -146,6 +146,7 @@ server {
 
   location / {
     proxy_pass http://wedesign; # match the name of upstream directive which is defined above
+    proxy_set_header X-Forwarded-Proto $scheme;
     proxy_set_header Host $host;
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
   }
